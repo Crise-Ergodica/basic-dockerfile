@@ -1,0 +1,11 @@
+# Imagem base - Alpine Linux
+FROM alpine:latest
+
+# Argumento de build com valor padrão
+ARG NAME=Captain
+
+# Variável de ambiente a partir do argumento
+ENV GREETING_NAME=${NAME}
+
+# Comando que usa a variável
+CMD echo "Hello, ${GREETING_NAME}!"
